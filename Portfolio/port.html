@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#a789d4">
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title> SUDHARSAN Portfolio </title>
+     <link rel="icon" href="data:image/jpeg;base64,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">
+
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">sudharsan</a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item ">
+                        <a href="#home" class="nav__link">
+                            <i class='bx bx-home'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item ">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-book'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--=============== theme change button ===============-->
+            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+
+        </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, I'm</span>
+                    <h1 class="home__name">sudharsan senthilkumar</h1>
+                    <h3 class="home__education">Data Scientist</h3>
+
+                    <div class="home__button">
+                        <a download="" href="./Sudharsan-Resume.pdf" class="button button--ghost">
+                            Download CV
+                        </a>
+
+                        <a href="#about" class="button">About</a>
+                    </div>
+                </div>
+
+                <div class="home__handle">
+                    <img src="./sudharsan1.jfif" alt="" class="home__img">
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/sudharsan-senthilkumar-b98ab4208" target="_blank" class="home__social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/Sudharsan0108/Sudharsan0108.git" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+
+                </div>
+
+                <a href="#about" class="home__scroll">
+                    <i class='bx bx-mouse home__scroll-icon'></i>
+                    <span class="home__scroll-name">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+            <span class="section__subtitle">My Intro</span>
+            <h2 class="section__title">About Me</h2>
+
+            <div class="about__container container grid">
+                <img src="sudharsan2.jfif" alt="" class="about__img">
+
+                <div class="about__data">
+                    <div class="about__info">
+                        <div class="about__box">
+                            <i class='bx bx-award about__icon'></i>
+                            <h3 class="about__title">Experience</h3>
+                            <span class="about__subtitle">5 Years Working</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-briefcase-alt about__icon'></i>
+                            <h3 class="about__title">Completed</h3>
+                            <span class="about__subtitle">12+ Projects</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-support about__icon'></i>
+                            <h3 class="about__title">Support</h3>
+                            <span class="about__subtitle">Online 24/7</span>
+                        </div>
+                    </div>
+
+                    <p class="about__description">
+                        I am <span>SUDHARSAN</span>. I am 23 years old. I am living in Thiruvarur.<br>
+                I have completed my graduation in B.SC Information Technology from <span>Bharathiyar University</span>.<br>
+                I have the ability to understand concepts quickly and I am a fast learner. My dream is to become a <span>Data Scientist</span> and I am also familiar with front-end development.<br>
+                    </p>
+
+                    <a href="#contact" class="button about__button-contact">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== SKILLS ===============-->
+        <section class="skills section" id="skills">
+            <span class="section__subtitle">My Abilities</span>
+            <h2 class="section__title">My Experience</h2>
+
+            <div class="skills__container container grid">
+                <div class="skills__content">
+                    <h3 class="skills__title">Frontend Development</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">HTML</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">CSS/SCSS</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Javascript</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+                                
+
+                                <div>
+                                    <h3 class="skills__name">React</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="skills__content">
+                    <h3 class="skills__title">Data Science</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">R Programming</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Python</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">PostgreSQL</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Pentaho</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!--=============== SERVICES ===============-->
+        <section class="services section">
+            <span class="section__subtitle">Knowledge</span>
+            <h2 class="section__title">What I Do</h2>
+
+            <div class="services__container container grid">
+                <div class="services__card">
+                    <div class="serv">
+                        <h3 class="services__title">Data <br> Analysis</h3>
+
+                        <span class="services__button">
+                            See More <i class='bx bx-right-arrow services__icon'></i>
+                        </span>
+                    </div>
+
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Data Analysis</h3>
+
+                            <p class="services__modal-description">
+                               sudharsan is passionate about the power of data to drive innovation and solve complex problems. They thrive in dynamic environments where they can apply their analytical skills to make a meaningful impact
+                            </p>
+
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Proficient in programming languages such as Python, R, SQL, and/or others
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Expertise in data manipulation, cleansing, and visualization using tools like Pandas, NumPy, Matplotlib, and/or others.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Experienced in statistical analysis, hypothesis testing, and predictive modeling techniques.
+                                    </p>
+                                </li>
+
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <h3 class="services__title">UI/UX <br> Designing</h3>
+
+                    <span class="services__button">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">UI/UX Designing</h3>
+
+                            <p class="services__modal-description">
+                                I design and develop the consumer products with creative ability and
+                                hands-on approach which stisfies the customers' and markets' needs and trends.
+                            </p>
+
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I develop the user interfaces.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Web Page design and development.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I create the UX element interactions.
+                                    </p>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <h3 class="services__title">Data <br> Scientist</h3>
+
+                    <span class="services__button">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Data Scientist</h3>
+
+                            <p class="services__modal-description">
+                             Sudharsan is passionate about leveraging data to solve complex problems and drive innovation. They thrive on tackling challenging projects and are always eager to explore new methodologies and technologies in the field of data science.
+                            </p>
+
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Experienced in data preprocessing, feature engineering, model training, and evaluation.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Strong knowledge of data visualization tools and techniques to communicate findings effectively.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Expertise in machine learning, deep learning, natural language processing, and/or other advanced analytical techniques.
+                                    </p>
+                                </li>
+
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== WORK ===============-->
+        <section class="work section" id="work">
+            <span class="section__subtitle">My Projects</span>
+            <h2 class="section__title">Recent Projects</h2>
+
+            <div class="work__filters">
+                <span class="work__item active-work" data-filter='all'>All</span>
+                <span class=" work__item" data-filter='.web'>Web Design</span>
+                <span class=" work__item" data-filter='.movil'>Data Scientist</span>
+            </div>
+
+            <div class="work__container container grid">
+                <div class="work__card mix web">
+                    <img src="./download7.jpeg" alt="" class="work__img">
+
+                    <h3 class="work__title">Web Design</h3>
+
+                    <a href="https://github.com/Sudharsan0108/chatbox.git" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix movil">
+                    <img src="./download01.png" alt="" class="work__img">
+
+                    <h3 class="work__title">matplotlib</h3>
+
+                    <a href="https://github.com/Sudharsan0108/Covid-Analysis.git" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                 <div class="work__card mix web">
+                    <img src="./download10.jpeg" alt="" class="work__img">
+
+                    <h3 class="work__title">Web Design</h3>
+
+                    <a href="https://github.com/Sudharsan0108/pizza-hub.git" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+                <div class="work__card mix movil">
+                    <img src="./download07.png" alt="" class="work__img">
+
+                    <h3 class="work__title">Pandas</h3>
+
+                    <a href="https://github.com/Sudharsan0108/pandas.git" class="work__button">
+                        Demo <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--=============== CONTACT ===============-->
+        <section class="contact section" id="contact">
+            <sapn class="section__subtitle">Get in touch</sapn>
+            <h3 class="section__title">Contact Me</h3>
+
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-info">Talk to me</h3>
+
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class='bx bx-mail-send contact__card-icon'></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">pgcs.sudharsan@gmail.com</span>
+
+                            <a href="mailto:sudharsansenthilkumar10@gmail.com" target="_blank" class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-whatsapp contact__card-icon'></i>
+                            <h3 class="contact__card-title">Whatsapp</h3>
+                            <span class="contact__card-data">8525021641</span>
+
+                            <a href="https://wa.me/+918525021641text=Hey there!" target="_blank"
+                                class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-twitter contact__card-icon'></i>
+                            <h3 class="contact__card-title">Twitter</h3>
+                            <span class="contact__card-data">sudhar</span>
+
+                            <a href="https://x.com/Sudhars51704330?t=0xvzGxOVNtfCL-udCbRJKw&s=09" target="_blank" class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-form">Write Me your Message</h3>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Name</label>
+                            <input type="text" placeholder="Enter name" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Mail</label>
+                            <input type="text" placeholder="Enter email" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div contact__form-area">
+                            <label for="" class="contact__form-tag">Message</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Write your Message"
+                                class="contact__form-input "></textarea>
+                        </div>
+
+
+                        <button class="button">
+                            Send Message
+                        </button>
+                    </form>
+
+                </div>
+
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">sudharsan</h1>
+
+            <ul class="footer__list">
+
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#about" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#skills" class="footer__link">Skills</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#work" class="footer__link">Projects</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#contact" class="footer__link">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="footer__social">
+                <li class="footer__social-item">
+                    <a href="https://www.facebook.com/smart.sudhar123456?mibextid=ZbWKwL" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://x.com/Sudhars51704330?t=0xvzGxOVNtfCL-udCbRJKw&s=09" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://pin.it/5n2YYfX" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-pinterest footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://instagram.com/mr.whiskey_10?igshid=YTQwZjQ0NmI0OA==" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram footer__social-icon'></i>
+                    </a>
+                </li>
+            </ul>
+
+            <span class="footer__copy">
+                &#169; 2025 Sudharsan. All rights reserved.
+            </span>
+        </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+
+    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
